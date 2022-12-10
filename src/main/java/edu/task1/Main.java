@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        // set coinsAvailable to the list of coins available in the ATM (1, 2, 5, 10, 20, 50, 100, 200, 500)
+        // set coinsAvailable to the list of coins available
         List<Integer> coinsAvailable = Arrays.asList(3,2);
 
         // set amount to the amount to be dispensed
