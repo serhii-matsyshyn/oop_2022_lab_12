@@ -30,6 +30,9 @@ public class CashedDocument implements Document {
 
         // if there is not, parse the document and save it to the database
         String text = document.parse();
+        // clean the text from special characters or incorrect symbols
+        text = text.replaceAll("[^a-zA-Z0-9\\s]", "");
+
         query = "INSERT INTO document (filename, text) VALUES ('" + document.getGcsPath() + "', '" + text + "')";
         dbConnection.executeQuery(query);
         return text;
